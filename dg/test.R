@@ -11,8 +11,11 @@
 
 
 trace("fwd", browser, exit=browser, signature = c("FLStock", "missing", "fwdControl"))
+untrace("fwd", signature = c("FLStock", "missing", "fwdControl"))
 
 trace("fwd", browser, exit=browser, signature = c("FLBiols", "FLFisheries", "fwdControl"))
+
+trace("coerce", browser, exit=browser, signature = c("FLBiol", "FLBiolcpp"))
 
 
  f0 <- fwd(om, control=fwdControl(quant='fbar', value=0, year=seq(iy + 1, fy)))
