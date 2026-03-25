@@ -10,6 +10,10 @@
 # }}}
 
 
+trace("fwd", browser, exit=browser, signature = c("FLStock", "missing", "fwdControl"))
+
+trace("fwd", browser, exit=browser, signature = c("FLBiols", "FLFisheries", "fwdControl"))
+
 
  f0 <- fwd(om, control=fwdControl(quant='fbar', value=0, year=seq(iy + 1, fy)))
 f0_ss3 <- fwd(om_ss3, control=fwdControl(quant='fbar', value=0, year=seq(iy + 1, fy)))
