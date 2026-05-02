@@ -24,3 +24,7 @@ args$control
 do.call(fwd.om, args)
 
 mpDispatch(floval, args)
+
+
+tmp <- mps(om, ctrl=arule, args=mseargs, hcr=list(target=fg_mp),
+names=paste0("GFCM_F_", fg_mp))
